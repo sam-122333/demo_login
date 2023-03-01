@@ -26,12 +26,20 @@ app.use(
     },
   })
 );
-app.use(
-  cors({
-    origin: true,
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: true,
+//     credentials: true,
+//   })
+// );
+
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "script-src 'self' cdn.jsdelivr.net"
+  );
+  next();
+});
 
 // let’s you use the cookieParser in your application
 app.use(cookieParser());
