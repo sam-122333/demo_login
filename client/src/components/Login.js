@@ -23,7 +23,6 @@ const Login = () => {
       body: JSON.stringify({ email, password }),
     });
     const data = await response.json();
-    console.log(data.success, "hello");
 
     if (response.status === 400 || response.status === 402 || !response) {
       window.alert("Something went wrong");
