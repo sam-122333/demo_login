@@ -45,34 +45,21 @@ const Navbar = () => {
                   </Link>
                 </li>
               ) : (
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                ((
                   <li className="nav-item">
                     <Link className="nav-link" to="/login">
                       Login
                     </Link>
                   </li>
+                ),
+                (
                   <li className="nav-item">
                     <Link className="nav-link" to="/signup">
                       Registration
                     </Link>
                   </li>
-                </ul>
+                ))
               )}
-              {/* <li className="nav-item">
-                <Link className="nav-link" to="/login">
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/signup">
-                  Registration
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/logout">
-                  logout
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>
