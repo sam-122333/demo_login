@@ -18,11 +18,14 @@ require("./DB/connection");
 //
 app.use(express.json());
 
-// app.use(
-//   express.urlencoded({
-//     extended: false,
-//   })
-// );
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      scriptSrc: ["'self'", "cdn.jsdelivr.net"],
+    },
+  })
+);
 app.use(
   cors({
     origin: true,
