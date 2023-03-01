@@ -42,7 +42,7 @@ const Contact = () => {
   const ContactFormSubmit = async (e) => {
     e.preventDefault();
     const { name, email, phone, message } = contactUserData;
-    const response = await fetch("http://localhost:4000/contact", {
+    const response = await fetch("/contact", {
       method: "POST",
       headers: {
         Accept: "application/json",
