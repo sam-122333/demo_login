@@ -34,10 +34,7 @@ app.use(
 // );
 
 app.use((req, res, next) => {
-  res.setHeader(
-    "Content-Security-Policy",
-    "script-src 'self' cdn.jsdelivr.net"
-  );
+  res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
 
