@@ -37,6 +37,14 @@ app.use(helmet());
 // linked the routes in app.js
 app.use(require("./routes/auth"));
 
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "connect-src 'self' http://localhost:4000"
+  );
+  next();
+});
+
 //server the front end
 app.use(express.static(path.join(__dirname, "./client/build")));
 
