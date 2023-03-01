@@ -9,7 +9,7 @@ const About = () => {
 
   const callAboutPage = async () => {
     try {
-      const response = await fetch("http://localhost:4000/about", {
+      const response = await fetch("/about", {
         method: "GET",
         headers: {
           Accept: "application/json",

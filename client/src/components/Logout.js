@@ -7,7 +7,7 @@ const Logout = () => {
   const { setToggleLogin } = contextCellValue;
   let history = useNavigate();
   const callLogout = async () => {
-    const res = await fetch("http://localhost:4000/logout", {
+    const res = await fetch("/logout", {
       method: "GET",
       headers: {
         Accept: "application/json",

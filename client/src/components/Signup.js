@@ -9,7 +9,7 @@ const Signup = () => {
     e.preventDefault();
     const { name, email, phone, work, password, cpassword } = regUserData;
     // console.log(regUserData);
-    const response = await fetch("http://localhost:4000/register", {
+    const response = await fetch("/register", {
       method: "POST",
       headers: {
         "content-type": "application/json",

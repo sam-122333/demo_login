@@ -7,7 +7,7 @@ const Home = () => {
 
   const callContactPage = async () => {
     try {
-      const response = await fetch("http://localhost:4000/getdata", {
+      const response = await fetch("/getdata", {
         method: "GET",
         headers: {
           Accept: "application/json",

@@ -10,7 +10,7 @@ const Login = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     const { email, password } = loginUserData;
-    const response = await fetch("http://localhost:4000/login", {
+    const response = await fetch("/login", {
       method: "POST",
       headers: {
         "content-type": "application/json",

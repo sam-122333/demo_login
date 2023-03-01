@@ -10,7 +10,7 @@ const Contact = () => {
     try {
       // const { name, email, phone, message } = contactUserData;
 
-      const response = await fetch("http://localhost:4000/getdata", {
+      const response = await fetch("/getdata", {
         method: "GET",
         headers: {
           Accept: "application/json",
